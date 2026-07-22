@@ -1,38 +1,39 @@
-alert("script.js çalıştı");
+alert("Script başladı");
+
 const supabaseUrl = "https://zyznqwyveslkxjxpzhpi.supabase.co";
 const supabaseKey = "sb_publishable_jlj-NyBWyFkseo57_TtVxA_WRVFO2RK";
 const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
 
 async function loadAccounts() {
+    try {
+        const { data, error } = await supabase
+            .from("accounts")
+            .select("*");
 
-  const { data, error } = await supabase
-    .from("accounts")
-    .select("*");
+        if (error) {
+            alert("Supabase Hatası: " + error.message);
+            return;
+        }
 
-  if (error) {
-  alert(error.message);
-  console.error(error);
-  return;
-}
+        alert("Bulunan hesap: " + data.length);
 
-alert("Kayıt sayısı: " + data.length);
+        const container = document.getElementById("accounts-list");
 
-  const container = document.getElementById("accounts-list");
-  container.innerHTML = "";
-
-  data.forEach(account => {
-    container.innerHTML += `
-      <div class="card">
-        <img src="${account.image}" alt="${account.title}">
-        <h3>${account.title}</h3>
-        <p>🚗 Araç: ${account.cars}</p>
-        <p>💰 Para: ${account.money}</p>
-        <p>⭐ Seviye: ${account.level}</p>
-        <p>💵 Fiyat: ${account.price}</p>
-        <a href="${account.telegram}" target="_blank">Telegram</a>
-      </div>
-    `;
-  });
+        data.forEach(account => {
+            const card = document.createElement("div");
+            card.className = "card";
+            card.innerHTML = `
+                <h3>${account.title}</h3>
+                <p>Araç: ${account.cars}</p>
+                <p>Para: ${account.money}</p>
+                <p>Seviye: ${account.level}</p>
+                <p>Fiyat: ${account.price}</p>
+            `;
+            container.appendChild(card);
+        });
+    } catch (e) {
+        alert("JS Hatası: " + e.message);
+    }
 }
 
 loadAccounts();
