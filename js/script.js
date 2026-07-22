@@ -13,3 +13,12 @@ document.querySelectorAll("#navbar a").forEach(link => {
         nav.classList.remove("active");
     });
 });
+async function loadAccounts() {
+  const { data, error } = await supabase
+    .from("accounts")
+    .select("*");
+
+  console.log(data, error);
+}
+
+loadAccounts();
