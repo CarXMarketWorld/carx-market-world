@@ -1,3 +1,4 @@
+alert("admin.js yüklendi");
 const supabaseUrl = "https://zyznqwyveslkxjxpzhpi.supabase.co";
 const supabaseKey = "sb_publishable_jlj-NyBWyFkseo57_TtVxA_WRVFO2RK";
 
