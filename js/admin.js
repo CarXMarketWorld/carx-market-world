@@ -1,5 +1,5 @@
 const supabaseUrl = "https://zyznqwyveslkxjxpzhpi.supabase.co";
-const supabaseKey = "BURAYA_PUBLISHABLE_KEY";
+const supabaseKey = "sb_publishable_jlj-NyBWyFkseo57_TtVxA_WRVFO2RK";
 const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
 
 async function addAccount() {
