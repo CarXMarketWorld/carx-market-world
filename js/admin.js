@@ -1,6 +1,6 @@
 const supabaseUrl = "https://zyznqwyveslkxjxpzhpi.supabase.co";
 const supabaseKey = "sb_publishable_jlj-NyBWyFkseo57_TtVxA_WRVFO2RK";
-const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
+window.db = window.supabase.createClient(supabaseUrl, supabaseKey);
 
 async function addAccount() {
 alert("Buton çalıştı");
@@ -12,7 +12,7 @@ alert("Buton çalıştı");
     const image = document.getElementById("image").value;
     const telegram = document.getElementById("telegram").value;
 
-    const { error } = await supabase
+    const { error } = await window.db
         .from("accounts")
         .insert([
             {
