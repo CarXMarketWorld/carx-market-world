@@ -10,9 +10,12 @@ async function loadAccounts() {
     .select("*");
 
   if (error) {
-    console.error(error);
-    return;
-  }
+  alert(error.message);
+  console.error(error);
+  return;
+}
+
+alert("Kayıt sayısı: " + data.length);
 
   const container = document.getElementById("accounts-list");
   container.innerHTML = "";
