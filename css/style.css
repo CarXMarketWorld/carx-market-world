@@ -305,7 +305,8 @@ url("../images/hero.jpg") center center/cover no-repeat;
 footer{
     background:#050505;
     text-align:center;
-    padding:70px
+    padding:70px      
+}       
 @media (max-width:768px){
 
 header{
