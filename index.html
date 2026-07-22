@@ -4,42 +4,232 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CarX Market World</title>
-<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#0d1117;
+color:#fff;
+}
+
+header{
+background:#111827;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-bottom:1px solid #1f2937;
+}
+
+.logo{
+font-size:28px;
+font-weight:700;
+color:#00e5ff;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:25px;
+transition:.3s;
+}
+
+nav a:hover{
+color:#00e5ff;
+}
+
+.hero{
+padding:90px 8%;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+flex-direction:column;
+}
+
+.hero h1{
+font-size:55px;
+margin-bottom:20px;
+}
+
+.hero span{
+color:#00e5ff;
+}
+
+.hero p{
+max-width:700px;
+font-size:18px;
+color:#b7c0ce;
+margin-bottom:35px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 40px;
+background:#00e5ff;
+color:#000;
+text-decoration:none;
+font-weight:600;
+border-radius:8px;
+transition:.3s;
+}
+
+.btn:hover{
+transform:scale(1.05);
+}
+
+.section{
+padding:70px 8%;
+}
+
+.section h2{
+text-align:center;
+font-size:36px;
+margin-bottom:40px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:#161b22;
+padding:30px;
+border-radius:15px;
+border:1px solid #30363d;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+border-color:#00e5ff;
+}
+
+.card h3{
+margin-bottom:15px;
+color:#00e5ff;
+}
+
+.telegram{
+text-align:center;
+padding:80px 20px;
+background:#111827;
+}
+
+.telegram h2{
+font-size:38px;
+margin-bottom:20px;
+}
+
+.telegram a{
+display:inline-block;
+margin-top:25px;
+padding:15px 45px;
+background:#229ED9;
+color:white;
+text-decoration:none;
+font-weight:600;
+border-radius:8px;
+}
+
+footer{
+text-align:center;
+padding:25px;
+background:#0b0f15;
+color:#8b949e;
+}
+</style>
+
 </head>
 <body>
+
 <header>
-<h1>CarX Market World</h1>
-<p>Premium Oyun Hesap Vitrini</p>
-<a class="btn" href="https://t.me/CarXMarketWorld">Telegram'dan İletişim</a>
+
+<div class="logo">
+CarX Market World
+</div>
+
+<nav>
+<a href="#">Ana Sayfa</a>
+<a href="#">Hesaplar</a>
+<a href="#">Hakkımızda</a>
+<a href="#">İletişim</a>
+</nav>
+
 </header>
 
-<section class="grid">
-<div class="card">
-<img src="images/account1.jpg" alt="Hesap">
-<h2>Premium Hesap</h2>
-<ul>
-<li>95 Araç</li>
-<li>120M Para</li>
-<li>Seviye 80</li>
-</ul>
-<div class="price">1.500 TL</div>
-<a class="btn" href="https://t.me/CarXMarketWorld">Satın Al</a>
-</div>
+<section class="hero">
 
-<div class="card">
-<div class="badge">Yeni</div>
-<img src="images/account2.jpg" alt="Hesap">
-<h2>Başlangıç Hesabı</h2>
-<ul>
-<li>35 Araç</li>
-<li>25M Para</li>
-<li>Seviye 35</li>
-</ul>
-<div class="price">650 TL</div>
-<a class="btn" href="https://t.me/CarXMarketWorld">Satın Al</a>
-</div>
+<h1>CarX Street <span>Hesap Pazarı</span></h1>
+
+<p>
+Güvenilir CarX Street hesap alım ve satımı.
+Hızlı teslimat, güvenli ticaret ve kaliteli hizmet.
+</p>
+
+<a href="https://t.me/CarXMarketWorld" class="btn">
+Telegram'a Katıl
+</a>
+
 </section>
 
-<footer>© CarX Market World</footer>
+<section class="section">
+
+<h2>Neden Biz?</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>🔒 Güvenli Ticaret</h3>
+<p>Tüm işlemler güvenli şekilde gerçekleştirilir.</p>
+</div>
+
+<div class="card">
+<h3>⚡ Hızlı Teslimat</h3>
+<p>Ödeme sonrası hesap en kısa sürede teslim edilir.</p>
+</div>
+
+<div class="card">
+<h3>⭐ Kaliteli Hesaplar</h3>
+<p>Yüksek seviyeli ve değerli CarX Street hesapları.</p>
+</div>
+
+<div class="card">
+<h3>💬 7/24 Destek</h3>
+<p>Telegram üzerinden sürekli iletişim.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="telegram">
+
+<h2>Hemen Telegram Kanalımıza Katıl</h2>
+
+<p>En yeni hesaplar ve fırsatlar burada paylaşılır.</p>
+
+<a href="https://t.me/CarXMarketWorld">
+Telegram Kanalı
+</a>
+
+</section>
+
+<footer>
+
+© 2026 CarX Market World
+
+</footer>
+
 </body>
 </html>
