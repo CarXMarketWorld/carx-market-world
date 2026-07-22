@@ -3,7 +3,7 @@ const supabaseKey = "sb_publishable_jlj-NyBWyFkseo57_TtVxA_WRVFO2RK";
 const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
 
 async function addAccount() {
-
+alert("Buton çalıştı");
     const title = document.getElementById("title").value;
     const cars = document.getElementById("cars").value;
     const money = document.getElementById("money").value;
