@@ -1,1 +1,49 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Admin Panel</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+</head>
+
+<body>
+
+<header>
+<h1>CarX Market World Admin</h1>
+</header>
+
+<main>
+
+<input id="title" placeholder="Hesap Adı">
+
+<input id="cars" placeholder="Araç Sayısı">
+
+<input id="money" placeholder="Para">
+
+<input id="level" placeholder="Seviye">
+
+<input id="price" placeholder="Fiyat">
+
+<input id="image" placeholder="Resim Linki">
+
+<input id="telegram" placeholder="Telegram Linki">
+
+<br><br>
+
+<button onclick="addAccount()">
+Hesabı Ekle
+</button>
+
+</main>
+
+<script src="js/admin.js"></script>
+
+</body>
+</html>
