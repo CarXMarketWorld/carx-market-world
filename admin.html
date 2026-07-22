@@ -1,1 +1,74 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CarX Market Admin</title>
 
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+body{
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+background:#050505;
+}
+
+.login{
+width:350px;
+background:#111;
+padding:30px;
+border-radius:15px;
+}
+
+input{
+width:100%;
+padding:15px;
+margin:10px 0;
+border:none;
+border-radius:10px;
+}
+
+button{
+width:100%;
+padding:15px;
+background:#00e5ff;
+border:none;
+font-weight:bold;
+border-radius:10px;
+cursor:pointer;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="login">
+
+<h2>Yönetici Girişi</h2>
+
+<input id="password" type="password" placeholder="Şifre">
+
+<button onclick="login()">
+Giriş Yap
+</button>
+
+</div>
+
+<script>
+function login(){
+
+if(document.getElementById("password").value=="CarX2026"){
+location.href="panel.html";
+}else{
+alert("Şifre yanlış");
+}
+
+}
+</script>
+
+</body>
+</html>
