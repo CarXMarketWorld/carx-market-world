@@ -27,8 +27,9 @@ async function addAccount() {
         ]);
 
     if (error) {
-        alert(error.message);
-    } else {
-        alert("Hesap başarıyla eklendi.");
+    console.log(error);
+    alert(error.message);
+} else {
+    alert("Hesap başarıyla eklendi.");
     }
 }
