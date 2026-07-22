@@ -3,72 +3,54 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CarX Market Admin</title>
+<title>CarX Market World Admin</title>
 
-<link rel="stylesheet" href="css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
 <style>
 body{
-display:flex;
-justify-content:center;
-align-items:center;
-height:100vh;
-background:#050505;
-}
-
-.login{
-width:350px;
 background:#111;
-padding:30px;
-border-radius:15px;
+color:white;
+font-family:Arial;
+padding:20px;
 }
 
 input{
 width:100%;
-padding:15px;
-margin:10px 0;
+padding:12px;
+margin:8px 0;
+border-radius:8px;
 border:none;
-border-radius:10px;
 }
 
 button{
 width:100%;
-padding:15px;
-background:#00e5ff;
+padding:14px;
+background:#00d2ff;
 border:none;
+border-radius:8px;
+font-size:18px;
 font-weight:bold;
-border-radius:10px;
 cursor:pointer;
 }
 </style>
 
 </head>
-
 <body>
 
-<div class="login">
+<h2>CarX Market World Admin</h2>
 
-<h2>Yönetici Girişi</h2>
+<input id="title" placeholder="Hesap Adı">
+<input id="cars" placeholder="Araç Sayısı">
+<input id="money" placeholder="Para">
+<input id="level" placeholder="Seviye">
+<input id="price" placeholder="Fiyat">
+<input id="image" placeholder="Resim Linki">
+<input id="telegram" placeholder="Telegram Linki">
 
-<input id="password" type="password" placeholder="Şifre">
+<button onclick="addAccount()">Hesabı Ekle</button>
 
-<button onclick="login()">
-Giriş Yap
-</button>
-
-</div>
-
-<script>
-function login(){
-
-if(document.getElementById("password").value=="CarX2026"){
-location.href="panel.html";
-}else{
-alert("Şifre yanlış");
-}
-
-}
-</script>
+<script src="js/admin.js"></script>
 
 </body>
 </html>
